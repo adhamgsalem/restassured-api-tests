@@ -1,0 +1,8 @@
+-------------------------------------------------------------------------------
+Test set: TestSuite
+-------------------------------------------------------------------------------
+Tests run: 3, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 4.931 s <<< FAILURE! - in TestSuite
+UserApiTest.testGetOneUser  Time elapsed: 0.119 s  <<< FAILURE!
+java.lang.ClassCastException: class java.util.LinkedHashMap cannot be cast to class java.util.List (java.util.LinkedHashMap and java.util.List are in module java.base of loader 'bootstrap')
+	at UserApiTest.testGetOneUser(UserApiTest.java:20)
+
