@@ -1,0 +1,59 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+# AI Coding Rules
+
+## General Best Practices
+- Think about it very carefully.
+- Use best practices, clean code, and beautiful styling (if ui is requested).
+- Be conscise and ensure accuracy of code.
+- Use DRY, SOLID, KISS, YAGNI, etc standard engineering principles.
+- Ensure proper usings/references are accurate and exist.”
+
+---
+
+## UI Automation (Web & Mobile)
+- **Follow the Page Object Model (POM)** for maintainability.
+- **Use waits properly** (Explicit over Implicit; avoid Thread.sleep).
+- **Avoid XPath if possible**—prefer ID, accessibility ID, or CSS selectors.
+- Use **data-driven testing** (parameterized tests).
+- Ensure tests **run independently** and do not depend on order.
+- **Minimize hardcoded values**—use configuration files or environment variables.
+
+### Web Automation (Selenium)
+- **Use Actions API** for complex interactions (drag-and-drop, hover, etc.).
+- Prefer **CSS Selectors over XPath** for better performance.
+- Capture **screenshots/logs** on failure.
+
+### Mobile-Specific (Appium)
+- Use **Appium’s Accessibility ID** instead of XPath.
+- Optimize for **cross-platform testing** (Android & iOS).
+- **Minimize re-installing apps** in tests for performance.
+- Handle **app permissions programmatically** to avoid pop-ups.
+- Use **mobile gestures** (swipe, tap, scroll) efficiently.
+
+---
+
+## API Automation (RestAssured, Postman)
+- Validate **status codes, response body, and headers**.
+- Use **serialization/deserialization** for handling payloads.
+- Avoid **hardcoded base URLs & authentication**—use environment variables.
+- Use **parallel execution** where applicable.
+- Implement **retry mechanisms** for flaky API calls.
+
+---
+
+## Performance & Security
+- Optimize loops, database calls, and network requests.
+- Never hardcode **credentials or secrets**—use environment variables or a secret vault.
+- **Implement proper logging levels**—avoid excessive logging in production.
+- **Monitor execution time**—tests should be fast and efficient.
+
+---
+
+> **Enforcement Levels:**  
+> 🟡 **Warning**: Best practice recommendations.  
+> 🔴 **Error**: Must-follow rules that prevent build failures.  
+
